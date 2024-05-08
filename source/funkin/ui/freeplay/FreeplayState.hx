@@ -1,18 +1,18 @@
 package funkin.ui.freeplay;
 
-import flixel.addons.transition.FlxTransitionableState;
-import flixel.addons.ui.FlxInputText;
 import flixel.FlxCamera;
 import flixel.FlxSprite;
-import flixel.group.FlxGroup;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 import flixel.input.touch.FlxTouch;
+import flixel.addons.transition.FlxTransitionableState;
+import flixel.addons.ui.FlxInputText;
 import flixel.math.FlxAngle;
 import flixel.math.FlxPoint;
 import flixel.system.debug.watch.Tracker.TrackerProfile;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
+import flixel.group.FlxGroup;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxSpriteUtil;
@@ -38,6 +38,9 @@ import funkin.ui.transition.LoadingState;
 import funkin.ui.transition.StickerSubState;
 import funkin.util.MathUtil;
 import lime.utils.Assets;
+#if discord_rpc
+import funkin.api.discord.Discord.DiscordClient;
+#end
 
 /**
  * Parameters used to initialize the FreeplayState.
