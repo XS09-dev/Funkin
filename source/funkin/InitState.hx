@@ -1,7 +1,6 @@
 package funkin;
 
-import funkin.ui.debug.charting.ChartEditorState;
-import funkin.ui.transition.LoadingState;
+import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
@@ -9,31 +8,33 @@ import flixel.addons.transition.TransitionData;
 import flixel.graphics.FlxGraphic;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
-import flixel.FlxSprite;
 import flixel.system.debug.log.LogStyle;
 import flixel.util.FlxColor;
-import funkin.util.macro.MacroUtil;
-import funkin.util.WindowUtil;
-import funkin.play.PlayStatePlaylist;
-import openfl.display.BitmapData;
-import funkin.data.story.level.LevelRegistry;
-import funkin.data.notestyle.NoteStyleRegistry;
-import funkin.data.event.SongEventRegistry;
-import funkin.data.stage.StageRegistry;
 import funkin.data.dialogue.conversation.ConversationRegistry;
 import funkin.data.dialogue.dialoguebox.DialogueBoxRegistry;
 import funkin.data.dialogue.speaker.SpeakerRegistry;
 import funkin.data.freeplay.album.AlbumRegistry;
 import funkin.data.song.SongRegistry;
-import funkin.play.character.CharacterData.CharacterDataParser;
 import funkin.modding.module.ModuleHandler;
 import funkin.ui.title.TitleState;
-import funkin.util.CLIUtil;
 import funkin.util.CLIUtil.CLIParams;
+import funkin.util.CLIUtil;
+import funkin.ui.transition.LoadingState;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.character.CharacterData.CharacterDataParser;
+import funkin.ui.debug.charting.ChartEditorState;
+import funkin.data.stage.StageRegistry;
+import funkin.data.story.level.LevelRegistry;
+import funkin.data.notestyle.NoteStyleRegistry;
+import funkin.data.event.SongEventRegistry;
 import funkin.util.TimerUtil;
 import funkin.util.TrackerUtil;
+import funkin.util.WindowUtil;
+import funkin.util.macro.MacroUtil;
+import lime.app.Application;
+import openfl.display.BitmapData;
 #if discord_rpc
-import Discord.DiscordClient;
+import funkin.api.discord.Discord.DiscordClient;
 #end
 
 /**
