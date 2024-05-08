@@ -8,6 +8,14 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
+import flixel.util.typeLimit.NextState;
+import funkin.audio.FunkinSound;
+import funkin.data.song.SongData.SongMusicData;
+import funkin.graphics.FunkinCamera;
+import funkin.ui.MusicBeatState;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.ui.story.StoryMenuState;
+import funkin.ui.title.TitleState;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.typeLimit.NextState;
 import flixel.group.FlxGroup.FlxTypedGroup;
@@ -28,7 +36,7 @@ import funkin.ui.story.StoryMenuState;
 import funkin.ui.Prompt;
 import funkin.util.WindowUtil;
 #if discord_rpc
-import Discord.DiscordClient;
+import funkin.api.discord.Discord.DiscordClient;
 #end
 #if newgrounds
 import funkin.ui.NgPrompt;
